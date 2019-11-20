@@ -1,0 +1,27 @@
+@media screen and (max-width: 499px) and (min-width: 0){
+    //header的下拉列表
+    .shopping-cart .shopping-cart-items {
+        padding-top: 10px;
+    }
+    .shopping-cart .shopping-cart-items li {
+        margin-bottom: 0px;
+    }   
+    .shopping-cart .shopping-cart-items .item-name {
+        font-size: 10px;
+    }
+    .shopping-cart .shopping-cart-header {
+        padding-bottom: 8px;
+    }
+    .dropdown-content{
+        width: 375px;
+    }
+    //產品列表
+    .cardpadding {
+        padding: 0 0% 0 12%;
+    }
+
+    //有圖的畫面牆
+    .imagewallposition {
+        display:none;
+    }
+  }

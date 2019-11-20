@@ -1,0 +1,39 @@
+{
+    "data":{
+        "user":        
+            {
+                "name":"admin",
+                "logintime":""
+            }
+        ,
+        "modules":
+        [
+            {   
+                "id":1,
+                "name":"產品列表",
+                "url":"/admin/products",
+                "icon":"fab fa-product-hunt"
+            },
+            {
+                "id":2,
+                "name":"訂單列表",
+                "url":"/admin/orders",
+                "icon":"fas fa-border-style"
+            },
+            {
+                "id":3,
+                "name":"優惠券列表",
+                "url":"/admin/coupons",
+                "icon":"fab fa-cuttlefish"
+            }
+        ],
+        "simulations":[
+            {
+                "id":1,
+                "name":"模擬訂單",
+                "url":"/customerorder",
+                "icon":"fas fa-shopping-cart"
+            }
+        ]
+    }
+}

@@ -1,0 +1,28 @@
+{
+    "data":{
+        "teacher":
+        [
+            {
+                "id":1,
+                "heading":"May Li",
+                "placeholder": "Placeholder",
+                "content": "本協會創始人，擅長團體中心靈層面的建設與引導，開辦至今二十年來，已主持近上千場大小各式活動，培育了近萬名學生在社會中大展頭角。",
+                "imgurl":"https://i.imgur.com/VoKYADm.jpg"
+            },
+            {   
+                "id":2,
+                "heading":"Scatty Chen",
+                "placeholder": "Placeholder",
+                "content": "投入訓練約莫五年年資，在學時期已舉辦各式大小活動，實戰經驗相當豐富，能準確地直指問題核心並提出最佳解決方式，擅長項目為課程教學，活動氣氛營造，與活動的大小規劃。",
+                "imgurl":"https://i.imgur.com/36lCZYJ.jpg"
+            },
+            {
+                "id":3,
+                "heading":"Gaobing Liou",
+                "placeholder": "Placeholder",
+                "content": "投入訓練約莫三年年資，是本協會的優秀後勤要角，從活動前的規畫到相關資源的配置，到當日現場的流程掌控，是一個活動中不可忽視的存在。",
+                "imgurl":"https://i.imgur.com/5Xx6z8N.png"                
+            }
+        ]
+    }
+}

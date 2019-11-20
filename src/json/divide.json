@@ -1,0 +1,28 @@
+{
+    "data":{
+        "devide":
+        [
+            {   
+                "id":1,
+                "heading": "探索真實的自我",
+                "content": "歲月不斷的前進，隨著時間推移是否有更了解自己，如果答案　　　　是否定的，沒關係，我們可以助你一臂之力。",
+                "img":"https://images.unsplash.com/19/nomad.JPG?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=688&q=80",
+                "position":" -5px -40px"
+            },
+            {
+                "id":2,
+                "heading": "你也是優秀的分享者",
+                "content": "我們秉持著教學相長，做中學並勇於分享的理念，每個人都可以　　　是導師，講出屬於自己的故事。",
+                "img":"https://images.unsplash.com/photo-1528605105345-5344ea20e269?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
+                "position":" -385px -20px"
+            },
+            {
+                "id":3,
+                "heading": "發掘內在的無限可能",
+                "content": "巨人長存於我們心中，你只是從未探索並發掘他，要相信　　　　　　你是那夜空中那最催懺的光芒，只要現在你試著開始喚醒他。",
+                "img":"https://images.unsplash.com/photo-1495767771383-e68aa78249f5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=749&q=80",
+                "position":" -143px -21px"
+            }
+        ]
+    }
+}

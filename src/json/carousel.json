@@ -1,0 +1,31 @@
+{
+    "data":{
+        "carousel":
+        [
+            {   
+                "id":1,
+                "title":"一同成長",
+                "imgurl":"https://images.unsplash.com/photo-1464207687429-7505649dae38?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1903&&h=512&q=80",
+                "content":"人生的道路上有你有我，從發芽到茁壯，從青澀到成熟。",
+                "routerurl":"/membercart",
+                "btnname":"查看詳情"
+            },
+            {
+                "id":2,
+                "title":"人生催燦的當下",
+                "imgurl":"https://images.unsplash.com/photo-1486589503730-6b8cb43a2d71?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1903&h=512&q=80",
+                "content":"讓你的努力成為往後人生的刻印，記錄下在人生中有輝煌而值得品味的一刻。",
+                "routerurl":"/membercart",
+                "btnname":"查看詳情"
+            },
+            {
+                "id":3,
+                "title":"無可取代的羈絆",
+                "imgurl":"https://images.unsplash.com/photo-1537365587684-f490102e1225?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1903&h=512&q=80",
+                "content":"與夥伴一同學習，一同面對，一同分享這當中的笑與淚。",
+                "routerurl":"/membercart",
+                "btnname":"我想知道"
+            }
+        ]
+    }
+}

@@ -1,0 +1,275 @@
+body {
+    font-size: .875rem;
+  }
+  
+  .feather {
+    width: 16px;
+    height: 16px;
+    vertical-align: text-bottom;
+  }
+  
+  /*
+   * Sidebar
+   */
+  
+  .sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100; /* Behind the navbar */
+    padding: 48px 0 0; /* Height of navbar */
+    box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+  }
+  
+  .sidebar-sticky {
+    position: relative;
+    top: 0;
+    height: calc(100vh - 48px);
+    padding-top: .5rem;
+    overflow-x: hidden;
+    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+  }
+  
+  @supports ((position: -webkit-sticky) or (position: sticky)) {
+    .sidebar-sticky {
+      position: -webkit-sticky;
+      position: sticky;
+    }
+  }
+  
+  .sidebar .nav-link {
+    font-weight: 500;
+    color: #333;
+  }
+  
+  .sidebar .nav-link .feather {
+    margin-right: 4px;
+    color: #999;
+  }
+  
+  .sidebar .nav-link.active {
+    color: #007bff;
+  }
+  
+  .sidebar .nav-link:hover .feather,
+  .sidebar .nav-link.active .feather {
+    color: inherit;
+  }
+  
+  .sidebar-heading {
+    font-size: .75rem;
+    text-transform: uppercase;
+  }
+  
+  /*
+   * Content
+   */
+  
+  [role="main"] {
+    // padding-top: 133px; /* Space for fixed navbar */
+  }
+  
+  @media (min-width: 768px) {
+    [role="main"] {
+      //padding-top: 48px; /* Space for fixed navbar */
+    }
+  }
+  
+  /*
+   * Navbar
+   */
+  
+  .navbar-brand {
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+    font-size: 1rem;
+    background-color: #bb8d66;
+    box-shadow: inset -1px 0 0 #bb8d66;
+  }
+  
+  .navbar .form-control {
+    padding: .75rem 1rem;
+    border-width: 0;
+    border-radius: 0;
+  }
+  
+  .form-control-dark {
+    
+    color: #fff;
+    background-color: rgba(255, 255, 255, .1);
+    border-color: rgba(255, 255, 255, .1);
+  }
+  
+  .form-control-dark:focus {
+    
+    border-color: transparent;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, .25);
+  }
+
+  .action {
+    overflow: visible;
+    padding: 0px;
+    width: 100;
+    background: #f2f2f2;
+    position: relative;
+}
+
+  .action .right-image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background-size: cover;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-image: url('https://images.unsplash.com/photo-1478812954026-9c750f0e89fc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80');    
+}
+
+  .action .left-text {
+    padding: 70px 0;
+    padding-right: 60px;
+    width: 50%;
+}
+
+  .actionfix{
+    width: 1170px;
+  }
+
+
+  .rm-thumb {
+    width: 145px;
+    height: 145px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin: 0 0 0 0;
+    box-shadow: inset 1px 1px 3px rgba(0,0,0,0.2), 1px 1px 1px rgba(255,255,255,0.1);
+    border-radius: 50%;
+}
+
+  .portfolio-grid {
+  margin-top: 65px;
+}
+
+.card {
+  position: relative;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0,0,0,.125);
+  border-radius: .25rem;
+}
+
+/* ==================================================
+  Portfolio Styling
+  ================================================== */
+  .portfolio {
+    background-color: #edf6ff;
+    padding-bottom: 0;
+  }
+  
+  .portfolio h2 {
+    color: #199EB8;
+    margin-bottom: 25px;
+  }
+  
+  .portfolio-grid {
+    margin-top: 65px;
+  }
+  
+  .portfolio-grid .row {
+    margin: 0;
+  }
+  
+  .portfolio-grid .row > div {
+    padding: 0;
+  }
+  
+  .portfolio-grid .row > div .card img {
+    width: 100%;
+  }
+  
+  .portfolio-grid .row > div .card .portfolio-over {
+    position: absolute;
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    top: 0;
+    left: 0;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  
+  .portfolio-grid .row > div .card .portfolio-over > div {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  
+  .portfolio-grid .row > div .card .portfolio-over .card-title {
+    color: #fff;
+    font-size: 30px;
+  }
+  
+  .portfolio-grid .row > div .card .portfolio-over .card-text {
+    color: #fff;
+    opacity: .75;
+    padding: 0 45px;
+  }
+  
+  .portfolio-grid .row > div .card:hover .portfolio-over {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+
+a:hover {
+  text-decoration: none !important;
+}
+
+
+
+.nav-tabs>li>a {
+  margin-right: 2px;
+  line-height: 1.42857143;
+  border: 1px solid transparent;
+  border-radius: 4px 4px 0 0;
+}
+
+.nav>li>a {
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+}
+
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+  color: #ffffff;
+  cursor: default;
+  background-color: #bb8d66;
+  border: 1px solid #ddd;
+  border-bottom-color: transparent;
+}
