@@ -106,7 +106,7 @@ export default {
       this.setYear = dt.getFullYear()
       this.setMonth = dt.getMonth() + 1
     },
-    monthDayCount (y, m) {
+    getmonthDayCount (y, m) {
       this.monthDayCount = (--m === 1)
         ? ((((y % 4) === 0) && ((y % 100) !== 0)) || ((y % 400) === 0))
           ? 29 : 28 : [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31][m]
@@ -177,41 +177,42 @@ export default {
       switch (vm.mode) {
         case 'now':
           this.getYearAndMonth()
-          var _year = this.setYear
-          var _month = this.setMonth
+          var _year = vm.setYear
+          var _month = vm.setMonth
 
-          this.monthDayCount(_year, _month)
-          this.prevMonth(_year, _month)
-          this.nextMonth(_year, _month)
-          this.createMonthArr(_year, _month)
-          return this.montharr
+          vm.getmonthDayCount(_year, _month)
+          vm.prevMonth(_year, _month)
+          vm.nextMonth(_year, _month)
+          vm.createMonthArr(_year, _month)
+          break
         case 'prev':
-          y = parseInt(this.prevyearNum, 10)
-          m = parseInt(this.prevmonthNum, 10)
+          y = parseInt(vm.prevyearNum, 10)
+          m = parseInt(vm.prevmonthNum, 10)
 
-          this.setYear = this.prevyearNum
-          this.setMonth = this.prevmonthNum
+          vm.setYear = vm.prevyearNum
+          vm.setMonth = vm.prevmonthNum
 
-          this.monthDayCount(y, m)
-          this.prevMonth(y, m)
-          this.nextMonth(y, m)
-          this.createMonthArr(y, m)
-          this.mode = 'none'
-          return this.montharr
+          vm.monthDayCount(y, m)
+          vm.prevMonth(y, m)
+          vm.nextMonth(y, m)
+          vm.createMonthArr(y, m)
+          vm.mode = 'none'
+          break
         case 'next':
-          y = parseInt(this.nextyearNum, 10)
-          m = parseInt(this.nextmonthNum, 10)
+          y = parseInt(vm.nextyearNum, 10)
+          m = parseInt(vm.nextmonthNum, 10)
 
-          this.setYear = this.nextyearNum
-          this.setMonth = this.nextmonthNum
-          this.monthDayCount(y, m)
-          this.prevMonth(y, m)
-          this.nextMonth(y, m)
-          this.createMonthArr(y, m)
-          this.mode = 'none'
-
-          return this.montharr
+          vm.setYear = vm.nextyearNum
+          vm.setMonth = vm.nextmonthNum
+          vm.getmonthDayCount(y, m)
+          vm.prevMonth(y, m)
+          vm.nextMonth(y, m)
+          vm.createMonthArr(y, m)
+          vm.mode = 'none'
+          break
       }
+
+      return this.montharr
     }
   },
   created () {
@@ -220,7 +221,7 @@ export default {
     var _year = this.setYear
     var _month = this.setMonth
 
-    this.monthDayCount(_year, _month)
+    this.getmonthDayCount(_year, _month)
     this.prevMonth(_year, _month)
     this.nextMonth(_year, _month)
     this.createMonthArr(_year, _month)

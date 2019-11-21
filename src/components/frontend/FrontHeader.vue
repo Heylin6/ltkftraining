@@ -172,9 +172,10 @@ export default {
       this.$emit('navbaractiveChange', item)
     },
     getCart () {
-      const api = `${process.env.VUE_APP_APIPATH}/api/${process.env.CUSTOMPATH}/cart`
+      const api = `${process.env.VUE_APP_APIPATH}/api/${process.env.VUE_APP_CUSTOMPATH}/cart`
+      console.log('api:', api)
       const vm = this
-      vm.maxcartcount = parseInt(`${process.env.MAXCAERCOUNT}`)
+      vm.maxcartcount = parseInt(`${process.env.VUE_APP_MAXCAERCOUNT}`)
       // console.log('vm.maxcartcount : ',vm.maxcartcount);
 
       this.$http.get(api).then((response) => {

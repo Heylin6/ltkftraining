@@ -257,14 +257,14 @@ export default {
   },
   methods: {
     getCart () {
-      const api = `${process.env.VUE_APP_APIPATH}/api/${process.env.CUSTOMPATH}/cart`
+      const api = `${process.env.VUE_APP_APIPATH}/api/${process.env.VUE_APP_CUSTOMPATH}/cart`
       const vm = this
       vm.isLoading = true
       this.$http.get(api).then((response) => {
         // console.log('=========');
         // console.log(response.data);
         // console.log('=========');
-        var maxcartcount = parseInt(`${process.env.MAXCAERCOUNT}`)
+        var maxcartcount = parseInt(`${process.env.VUE_APP_MAXCAERCOUNT}`)
         // console.log('vm.maxcartcount : ',vm.maxcartcount);
         vm.cart = response.data.data
         this.$bus.$emit('carts:push', response.data.data, maxcartcount)
@@ -274,7 +274,7 @@ export default {
     removeCartItem (pid) {
       var del = confirm('確定刪除該項目?')
       if (del) {
-        const api = `${process.env.VUE_APP_APIPATH}/api/${process.env.CUSTOMPATH}/cart/${pid}`
+        const api = `${process.env.VUE_APP_APIPATH}/api/${process.env.VUE_APP_CUSTOMPATH}/cart/${pid}`
         const vm = this
         vm.isLoading = true
         this.$http.delete(api).then((response) => {
@@ -290,7 +290,7 @@ export default {
       }
     },
     addCouponCode () {
-      const api = `${process.env.VUE_APP_APIPATH}/api/${process.env.CUSTOMPATH}/coupon`
+      const api = `${process.env.VUE_APP_APIPATH}/api/${process.env.VUE_APP_CUSTOMPATH}/coupon`
       const vm = this
       const coupon = {
         code: vm.coupon_code
@@ -306,7 +306,7 @@ export default {
       })
     },
     createOrder () {
-      const api = `${process.env.VUE_APP_APIPATH}/api/${process.env.CUSTOMPATH}/order`
+      const api = `${process.env.VUE_APP_APIPATH}/api/${process.env.VUE_APP_CUSTOMPATH}/order`
       const vm = this
       const form = vm.form
       this.$validator.validate().then((result) => {

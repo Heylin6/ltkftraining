@@ -1,13 +1,12 @@
-import '@babel/polyfill'
-import 'mutationobserver-shim'
 import Vue from 'vue'
-import './plugins/bootstrap-vue'
-import axios from './plugins/axios'
 import App from './App.vue'
 import router from './router'
 import './bus.js'
 import VueI18n from 'vue-i18n'
-import './filters/currency.js'
+import axios from './plugins/axios'
+import '@babel/polyfill'
+import 'mutationobserver-shim'
+import './plugins/bootstrap-vue'
 import './filters/date.js'
 import VeeValidate, { validate } from 'vee-validate'
 import 'vee-validate/dist/locale/zh_TW.json'
@@ -17,10 +16,35 @@ import 'vue-axios'
 
 Vue.config.productionTip = false
 
+const _axios = require('axios')
+Vue.prototype.$http = _axios
+
+const _vueaxios = require('vue-axios')
+Vue.use(_vueaxios, _axios)
+
+const _loading = require('vue-loading-overlay')
+Vue.component('Loading', _loading)
+
+const _currencyFilter = require('./filters/currency.js')
+/* Vue.filter('currency', _currencyFilter) 用 filter 這段會出錯 */
+
+const _dateConvert = require('./filters/date.js')
+
+const _zhTWVeeValidate = require('vee-validate/dist/locale/zh_TW')
+
 Vue.use(VueI18n)
 const i18n = new VueI18n({
   locale: 'zhTW'
 })
+
+/* Vue.use(VeeValidate, {
+  i18n,
+  dictionary: {
+    _zhTWVeeValidate
+  }
+}) 這段寫法也會出錯 */
+
+/* validate.localize('zh-TW', _zhTWVeeValidate) 這段出現沒 localize 這個方法 */
 
 new Vue({
   i18n,

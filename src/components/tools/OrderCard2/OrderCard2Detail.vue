@@ -128,7 +128,7 @@ export default {
   },
   methods: {
     getProduct (pid) {
-      const api = `${process.env.VUE_APP_APIPATH}/api/${process.env.CUSTOMPATH}/product/${pid}`
+      const api = `${process.env.VUE_APP_APIPATH}/api/${process.env.VUE_APP_CUSTOMPATH}/product/${pid}`
       const vm = this
       vm.isLoading = true
       this.$http.get(api).then((response) => {
@@ -145,7 +145,7 @@ export default {
       if (qty <= 0) {
         this.$bus.$emit('message:push', '數量錯誤,不得為零或負數', 'danger')
       } else {
-        const api = `${process.env.VUE_APP_APIPATH}/api/${process.env.CUSTOMPATH}/cart`
+        const api = `${process.env.VUE_APP_APIPATH}/api/${process.env.VUE_APP_CUSTOMPATH}/cart`
         const vm = this
         vm.isLoading = true
         const cart = { product_id: pid, qty }

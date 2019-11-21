@@ -114,7 +114,7 @@ export default {
   methods: {
     getOrder () {
       const vm = this
-      const api = `${process.env.VUE_APP_APIPATH}/api/${process.env.CUSTOMPATH}/order/${vm.orderId}`
+      const api = `${process.env.VUE_APP_APIPATH}/api/${process.env.VUE_APP_CUSTOMPATH}/order/${vm.orderId}`
       vm.isLoading = true
       this.$http.get(api).then((response) => {
         // console.log('=========');
@@ -126,7 +126,7 @@ export default {
     },
     payOrder () {
       const vm = this
-      const api = `${process.env.VUE_APP_APIPATH}/api/${process.env.CUSTOMPATH}/pay/${vm.orderId}`
+      const api = `${process.env.VUE_APP_APIPATH}/api/${process.env.VUE_APP_CUSTOMPATH}/pay/${vm.orderId}`
       vm.isLoading = true
       this.$http.post(api).then((response) => {
         // console.log('=========');

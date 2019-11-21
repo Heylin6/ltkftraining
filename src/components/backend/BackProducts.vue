@@ -259,7 +259,7 @@ export default {
   },
   methods: {
     getProducts (pagenum = 1) {
-      const api = `${process.env.VUE_APP_APIPATH}/api/${process.env.CUSTOMPATH}/products/?page=${pagenum}`
+      const api = `${process.env.VUE_APP_APIPATH}/api/${process.env.VUE_APP_CUSTOMPATH}/products/?page=${pagenum}`
       const vm = this
       vm.isLoading = true
       this.$http.get(api).then((response) => {
@@ -285,12 +285,12 @@ export default {
       $('#productModal').modal('show')
     },
     updateProduct () {
-      let api = `${process.env.VUE_APP_APIPATH}/api/${process.env.CUSTOMPATH}/admin/product`
+      let api = `${process.env.VUE_APP_APIPATH}/api/${process.env.VUE_APP_CUSTOMPATH}/admin/product`
       let httpMethod = 'post'
       const vm = this
       if (!vm.isNew) {
         // 假設不是新增 則為修改
-        api = `${process.env.VUE_APP_APIPATH}/api/${process.env.CUSTOMPATH}/admin/product/${vm.tempProduct.id}`
+        api = `${process.env.VUE_APP_APIPATH}/api/${process.env.VUE_APP_CUSTOMPATH}/admin/product/${vm.tempProduct.id}`
         httpMethod = 'put'
       }
       this.$http[httpMethod](api, { data: vm.tempProduct }).then((response) => {
@@ -307,7 +307,7 @@ export default {
       })
     },
     deleteProduct (item) {
-      // const api = `${process.env.VUE_APP_APIPATH}/api/${process.env.CUSTOMPATH}/products`
+      // const api = `${process.env.VUE_APP_APIPATH}/api/${process.env.VUE_APP_CUSTOMPATH}/products`
       // const vm = this
       var del = confirm('確定刪除?')
       if (del) {
@@ -329,7 +329,7 @@ export default {
       const formData = new FormData()
       // 塞入檔案
       formData.append('file-to-upload', uploadedfile)
-      const url = `${process.env.VUE_APP_APIPATH}/api/${process.env.CUSTOMPATH}/admin/upload`
+      const url = `${process.env.VUE_APP_APIPATH}/api/${process.env.VUE_APP_CUSTOMPATH}/admin/upload`
       // 執行上傳時 開啟讀取icon
       vm.status.fileUploading = true
       // 傳遞時修正他的header

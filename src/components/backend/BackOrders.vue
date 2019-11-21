@@ -204,7 +204,7 @@ export default {
   },
   methods: {
     getOrders (pagenum = 1) {
-      const api = `${process.env.VUE_APP_APIPATH}/api/${process.env.CUSTOMPATH}/orders/?page=${pagenum}`
+      const api = `${process.env.VUE_APP_APIPATH}/api/${process.env.VUE_APP_CUSTOMPATH}/orders/?page=${pagenum}`
       const vm = this
       vm.isLoading = true
       this.$http.get(api).then((response) => {
@@ -230,7 +230,7 @@ export default {
       $('#OrdersModal').modal('show')
     },
     updateOrder (oid) {
-      const api = `${process.env.VUE_APP_APIPATH}/api/${process.env.CUSTOMPATH}/admin/order/${oid}`
+      const api = `${process.env.VUE_APP_APIPATH}/api/${process.env.VUE_APP_CUSTOMPATH}/admin/order/${oid}`
       const httpMethod = 'put'
       const vm = this
       this.$http[httpMethod](api, { data: vm.tempOrder }).then((response) => {
