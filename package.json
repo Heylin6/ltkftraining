@@ -6,7 +6,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "lint-fix":"vue-cli-service lint --fix"
+    "lint-fix": "vue-cli-service lint --fix"
   },
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^2.8.0",
@@ -15,7 +15,6 @@
     "@vue/eslint-config-prettier": "^6.0.0",
     "@vue/eslint-config-standard": "^5.0.0",
     "@vue/eslint-config-typescript": "^5.0.0",
-    "bootstrap-vue": "^2.0.4",
     "core-js": "^3.3.2",
     "eslint-auto-fix": "^1.0.0",
     "eslint-plugin-node": "^10.0.0",
@@ -48,8 +47,7 @@
     "sass-loader": "^8.0.0",
     "typescript": "~3.5.3",
     "vue-cli-plugin-axios": "0.0.4",
-    "vue-cli-plugin-axios-ts": "^1.0.2",
-    "vue-cli-plugin-bootstrap-vue": "^0.5.0",
+    "vue-cli-plugin-axios-ts": "^1.0.2",    
     "vue-template-compiler": "^2.6.10"
   },
   "eslintConfig": {

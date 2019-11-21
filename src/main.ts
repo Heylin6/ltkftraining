@@ -6,12 +6,12 @@ import VueI18n from 'vue-i18n'
 import axios from './plugins/axios'
 import '@babel/polyfill'
 import 'mutationobserver-shim'
-import './plugins/bootstrap-vue'
 import './filters/date.js'
 import VeeValidate, { validate } from 'vee-validate'
 import 'vee-validate/dist/locale/zh_TW.json'
 import 'vue-loading-overlay/dist/vue-loading.css'
 import 'bootstrap'
+import './plugins/bootstrap-vue'
 import 'vue-axios'
 
 Vue.config.productionTip = false
