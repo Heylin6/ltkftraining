@@ -30,3 +30,7 @@ https://footmark.info/programming-language/vuejs/vue-cli3-seting/
 
 ### 前端進階積累
 http://obkoro1.com/web_accumulate/
+
+1.npm build dist 以後打開是空白頁面(cli 3.0版)
+
+    https://juejin.im/post/5d3e593b51882523ab759983

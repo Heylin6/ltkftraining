@@ -7,7 +7,7 @@ import axios from './plugins/axios'
 import '@babel/polyfill'
 import 'mutationobserver-shim'
 import './filters/date.js'
-import VeeValidate, { validate } from 'vee-validate'
+import * as VeeValidate from 'vee-validate'
 import 'vee-validate/dist/locale/zh_TW.json'
 import 'vue-loading-overlay/dist/vue-loading.css'
 import 'bootstrap'
@@ -26,9 +26,10 @@ const _loading = require('vue-loading-overlay')
 Vue.component('Loading', _loading)
 
 const _currencyFilter = require('./filters/currency.js')
-/* Vue.filter('currency', _currencyFilter) 用 filter 這段會出錯 */
+Vue.filter('currency', _currencyFilter)
 
 const _dateConvert = require('./filters/date.js')
+Vue.filter('date', _dateConvert)
 
 const _zhTWVeeValidate = require('vee-validate/dist/locale/zh_TW')
 
@@ -44,7 +45,7 @@ const i18n = new VueI18n({
   }
 }) 這段寫法也會出錯 */
 
-/* validate.localize('zh-TW', _zhTWVeeValidate) 這段出現沒 localize 這個方法 */
+VeeValidate.localize('zh-TW', _zhTWVeeValidate)
 
 new Vue({
   i18n,
